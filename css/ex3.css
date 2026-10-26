@@ -4,24 +4,24 @@ body{
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
-    color:rgba(87, 117, 144, 1);
+    color:#c3511f;
 
     font-family: "Roboto", sans-serif;
 }
 
 ::selection{
-    background: rgba(87, 117, 144, 1);
+    background: #f7c13e;
     color: rgba(255, 255, 255, 1);
 }
 
 a{
     text-decoration: none;
-    color: rgba(87, 117, 144, 1);
+    color: #c3511f;
     display: inline-block;
 }
 
 a:hover{
-    color: rgba(87, 117, 144, 1);
+    color: #f28a45dd;
 }
 
 /*header*/
@@ -35,7 +35,7 @@ header{
 
 /*menu*/
 .menu{
-    width: 80%;
+    width: 85%;
     margin: 10px auto;
     display:flex;
 }
@@ -43,13 +43,14 @@ header{
 /*logo*/
 .logo{
     flex:0 0 120px;
+    margin-top: 20px;     /* ← 往下移 10px，數字自己調 */
 }
 
 .logo img{
     width: 100%;
     margin: auto;
-    background: rgba(255, 255, 255, .5);
-	border-radius: 50%;
+    background: #f7c13e;
+	border-radius: 50% 50%;
 }
 
 /*nav*/
@@ -59,8 +60,10 @@ nav{
 }
 
 nav a{
-    padding: 50px;
+    padding: 45px;
     font-weight: bold;
+    font-size: larger;
+    color: #f7c13e;
 }
 
 nav a:hover{
@@ -71,8 +74,8 @@ nav a:hover{
 .hero{
     position: relative;   
     width: 100%;
-    height: 90vh;
-    background:rgba(87, 117, 144, .2);
+    height: 100%;
+    background:#c3511f;
 }
 
 .hero img{
@@ -84,13 +87,20 @@ nav a:hover{
 
 .hero h1{
     position: absolute;
-    top:20%;
+    top:50%;
 	left:50%;
 	transform: translate(-50%, -50%);
 
-    font-size: 150px;
-    color: rgba(87, 117, 144, 1);
+    width: 50%;          /* 標準字佔 hero 寬度的 35%，螢幕變小它也跟著變小 */
+    margin: 0;           /* 去掉 h1 預設的上下間距 */
 }
+
+.hero h1 img{
+    width: 100%;         /* 填滿 h1 的寬度 */
+    height: auto;        /* 高度照比例，蓋掉 .hero img 的 100% */
+    object-fit: initial;
+}
+
 
 /*section*/
 section{
@@ -105,8 +115,12 @@ section{
 
 section h1{
     flex:0 0 100%;
-    color:rgba(87, 117, 144, 1);
+    color:#f7c13e;
     text-align: center;
+}
+
+section p{
+    color:#2d2926;
 }
 
 /*card*/
@@ -120,7 +134,7 @@ section h1{
 .card img{
 	width:80%;
 	border-radius:50%;
-	border:solid 1px rgba(87, 117, 144, 1);
+	border:solid 1px #dcb25d;
     
 	-ms-transform: rotate(0deg); /* IE 9 */
     -webkit-transform: rotate(0deg); /* Safari */
@@ -141,7 +155,7 @@ article{
 	flex:0 0 100%;
 	margin:auto;
     margin-bottom: 30px;
-    border:solid 4px rgba(87, 117, 144, 1);
+    border:solid 4px #c3511f;
     border-radius: 50px;
     box-sizing: border-box;
 
@@ -153,8 +167,8 @@ section > a:nth-of-type(2n) article{
 }
 
 article:hover{
-    border:solid 8px rgba(87, 117, 144, 1);
-    background:rgba(87, 117, 144, .2);
+    border:solid 8px #c3511f;
+    background:#ffe7c5e1;
 }
 
 .a_left{
@@ -173,7 +187,7 @@ article:hover{
 	flex:1;
 	padding: 4%;
 	box-sizing:border-box;
-	color:rgba(87, 117, 144, 1);
+	color:#c3511f;
 	text-align:left;
     line-height: 2rem;
 }
@@ -213,7 +227,7 @@ body{
 }
 
 .logo img{
-    width: 30%;
+    width: 25%;
     margin: auto;
 }
 
@@ -232,9 +246,11 @@ nav a{
 }
 
 .hero h1{
-    top:40%;
-    font-size: 80px;
+    width: 70%;
+    left: 50%;           /* 手機版置中 */
+    top: 60%;
 }
+
 
 /*card*/
 .card{
